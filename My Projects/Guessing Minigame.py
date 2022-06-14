@@ -1,6 +1,3 @@
-
-#>>>>> Practice excercises where made functions to commment them out as needed
-
 #Get rid of annoying pylint message
 # pylint: disable=C0103
 
