@@ -269,9 +269,26 @@ def PhoneExercise():
     output = '\n'
 
     for i in number_string:
-
-        output += f'{my_dictionary.get(i)} '
+        output += my_dictionary.get(i, "!") + ' '
 
     print(output)
 
-PhoneExercise()
+#PhoneExercise()
+
+def EmojiConverter():
+    string = input('> ')
+    string_list = string.split(' ')
+    EmojiMapping = {
+        ':)': '😀',
+        ':(': '🙁'
+    }
+    output = ''
+    for item in string_list:
+        if item in EmojiMapping:
+            output += EmojiMapping.get(item)
+        else:
+            output += item + ' '
+    
+    print('\n' + output)
+
+#EmojiConverter()
