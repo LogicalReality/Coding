@@ -7,10 +7,9 @@ while program_on_check:
 
     try:
         if 'help' in command.lower():
-            print('\n---> Enter one of the following commands:\n')
-            print('start - to start the car')
-            print('stop - to stop the car')
-            print('exit - to exit game\n')        
+            # This print function could be better, the indentation that appears of using triple quotes made me come up with this solution.
+            print(
+                '\n---> Enter one of the following commands: \n\n start - to start the car \n stop - to stop the car \n exit - to exit game\n')       
 
         elif 'start' in command.lower():
             print('Car started... Ready to go!\n')
