@@ -1,6 +1,6 @@
 #>>>>> Aqui me vuelvo loco repasando Python con Programming With Mosh (Youtube channel)
 
-#>>>>> Practice excercises where made functions to commment them out as needed. This was made this way so I could just practice the ones I want without running the whole code, while using a single file. 
+#>>>>> Practice exercises where made functions to commment them out as needed. This was made this way so I could just practice the ones I want without running the whole code, while using a single file. 
 
 from random import randint, random
 import string
@@ -144,7 +144,7 @@ def ForLoopRange():
 
 # The range funcion range(number_excludes_last) or range(start, finish, step), the finishing number is excluded. Use ForLoopRange() to see what I mean.
 
-# Shooping cart excercise
+# Shooping cart exercise
 def PriceSum():        
     prices = [10, 20, 30, 120]
 
@@ -244,4 +244,34 @@ def FizzBuzz(number):
     
     return number
 
-print(FizzBuzz(randint(1,100)))
+#print(FizzBuzz(randint(1,100)))
+
+# Tuples is a data type that can't be modified, identified by parenthesis.
+
+def TuplesUnpacking():
+    coordinates = (1, 2, 3)
+    # Unpacking is a very useful feature that can be used with lists and tuples.
+    x, y, z = coordinates
+    print(x, y, z)
+
+#TuplesUnpacking()
+
+# Phone number exercise
+
+def PhoneExercise():
+    my_dictionary = {
+        '1': 'One',
+        '2': 'Two',
+        '3': 'Three',
+        '4': 'Four'
+    }
+    number_string = input(' - Insert a number >>> ')
+    output = '\n'
+
+    for i in number_string:
+
+        output += f'{my_dictionary.get(i)} '
+
+    print(output)
+
+PhoneExercise()
