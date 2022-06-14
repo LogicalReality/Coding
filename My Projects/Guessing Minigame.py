@@ -1,4 +1,4 @@
-#Get rid of annoying pylint message
+# Get rid of annoying pylint message
 # pylint: disable=C0103
 
 """Module random for random-chosen integer number"""
@@ -6,22 +6,22 @@ from random import randint
 
 print('\n----- LogicalReality -----\n')
 
-#>>>>> Guessing game  con While Loops
+# >>>>> Guessing game  con While Loops
 i = 0
-#Settings
+# Settings
 tries = 5
 bottom_number = 1
 ceiling_number = 5
 
-#Random number generator function
+# Random number generator function
 random_integer = randint(bottom_number, ceiling_number)
 
-#Welcome message + explanation
+# Welcome message + explanation
 print(' - $$$ Guessing Minigame! $$$ - \n')
 print(f' - Guess a random integer number between [{bottom_number}] and [{ceiling_number}] - \n')
 
-#The Following line is just for testing purposes
-#print(f' - Random Number: {random_integer} \n')
+# The Following line is just for testing purposes
+# print(f' - Random Number: {random_integer} \n')
 
 while i < tries:
 
