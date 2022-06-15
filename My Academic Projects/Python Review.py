@@ -302,3 +302,54 @@ def emoji_converter2():
 
 #emoji_converter2()
 
+#--------------- Object Oriented Programming -------------------
+
+# Class atributes and methods. Remember that every object is a unique instance of its class.
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+    def talk(self):
+        print(f'\n - Hi, my name is {self.name}\n')
+
+
+person1 = Person('Tyronne')
+print(person1.name)
+person1.talk()
+
+#Class inheritance: new classes can inherit attributes and methods from parents classes.
+
+class Mammal:
+    def walk(self):
+        print('walk')
+
+
+class Dog(Mammal):
+    # Pass is used to just skip this line, don't leave a class empty.
+    pass
+
+
+class Cat(Mammal):
+    pass
+
+
+cat1 = Cat()
+cat1.walk()
+dog1 = Dog()
+dog1.walk()
+
+
+class Dog2(Mammal):
+    def bark(self):
+        print('Woof Woof')
+
+
+class Cat2(Mammal):
+    def meow(self):
+        print('Meow Meow')
+
+
+cat2 = Cat2()
+cat2.meow()
+dog2 = Dog2()
+dog2.bark()
