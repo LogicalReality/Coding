@@ -26,18 +26,18 @@ print(f' - Guess a random integer number between [{bottom_number}] and [{ceiling
 while i < tries:
 
     user_input = input(
-        f'Ingrese un numero entre {bottom_number} y {ceiling_number}  (ambos incluidos) >>> ')
+        f'Insert a number between {bottom_number} y {ceiling_number}  (both included) >>> ')
     try:
         numeric_input = int(user_input)
 
         if numeric_input == random_integer:
-            print('\n ---> Acertaste!\n')
+            print('\n ---> You got it right!\n')
             break
         else:
             i += 1
-            print(f'\n ---X Incorrecto. Le quedan {tries - i} intentos.\n')
+            print(f'\n ---X Incorrect. You got {tries - i} tries left.\n')
 
     except ValueError:
-        print('\n - Por favor, ingrese un dato numerico valido\n')
+        print('\n - Please insert a valid numeric value.\n')
 
 print(f' - Random Number: {random_integer} \n')

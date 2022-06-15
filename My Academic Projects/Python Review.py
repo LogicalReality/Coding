@@ -5,14 +5,14 @@ from random import randint, random
 import string
 import string
 
-def HelloWorld():
+def hello_world():
     print('\n----- LogicalReality -----\n')
 
 
-HelloWorld()
+hello_world()
 
 # Remember that input() function returns a string, if you wanna convert it into a numeric value you can use int() o float().
-def UserInfo():
+def user_info():
     user_name = input(' - Inserta tu nombre >>> ')  
     user_age = input('\n - Inserte su edad >>> ')
     user_birthyear = 2022 - int(user_age)
@@ -20,10 +20,10 @@ def UserInfo():
     print(f'\n---> Hola {user_name.capitalize()} (tienes {user_age} años, nacido en el año {user_birthyear}), te gusta el color {user_color.lower()}.\n')
 
 
-#UserInfo()
+#user_info()
 
 #  Ejercicio del peso con If statements.
-def WeightConversion():
+def weight_conversion():
     user_weight = input(' - Cuanto es tu peso corporal actualmente? >>> ')
 
     weight_unit = input('\n - Unidad de peso a utilizar: [1] Kg (Kilograms), [2] Libras (Pounds) >>> ')
@@ -38,10 +38,10 @@ def WeightConversion():
             print('\n ---> Por favor insertar solo (1) numero de las opciones propuestas: [1] o [2]')
 
 
-#WeightConversion()
+#weight_conversion()
 
 # Ejercicio de la casa.
-def HouseCredit():
+def house_credit():
     house_price = 1000000
     has_good_credit = True
 
@@ -53,10 +53,10 @@ def HouseCredit():
         print(f' - Your upfront payment for the house is ${down_payment}')
 
 
-#HouseCredit()
+#house_credit()
 
 # Comparison operators exercise
-def NameLength():
+def name_length():
     name = input(" - Insert your name >>> ")
     if len(name) <= 3:
         print('\n ---> Name must be at least 3 characters long.')
@@ -67,10 +67,10 @@ def NameLength():
         print('\n ---> Name looks good')
 
 
-#NameLength()
+#name_length()
 
 # While Loop exercise. While a certain boolean expression is true, the loop is executed. BEWARE with infinite loops.
-def SimpleLoopAsterisc():   
+def simple_loop_asterisc():   
     i = 1
     while i <= 10:
         print('*' * i)
@@ -79,7 +79,7 @@ def SimpleLoopAsterisc():
 
 
 #>>>>> Guessing game using While Loops
-def GuessingGame():
+def guessing_game():
     i = 0
     # Settings
     tries = 5
@@ -112,35 +112,35 @@ def GuessingGame():
     print(f' - Random Number: {random_integer} \n')
 
 
-#GuessingGame()
+#guessing_game()
 
 # For loops
 
-def ForLoop():
+def for_loop():
     for item in 'LogicalReality':
         print(item)
 
-#ForLoop()
+#for_loop()
 
 # For loop using a list
 
-def ForLoopList():
+def for_loop_list():
     for item in ['Lucas', 'Dustin', 'Eleven']:
         print(item)
 
-#ForLoopList()
+#for_loop_list()
 
-def ForLoopRange():
+def for_loop_range():
     for item in range(10, 21, 5):
         print(item)
 
 
-#ForLoopRange()
+#for_loop_range()
 
-# The range funcion range(number_excludes_last) or range(start, finish, step), the finishing number is excluded. Use ForLoopRange() to see what I mean.
+# The range funcion range(number_excludes_last) or range(start, finish, step), the finishing number is excluded. Use for_loop_range() to see what I mean.
 
 # Shooping cart exercise
-def PriceSum():        
+def price_sum():        
     prices = [10, 20, 30, 120]
     total=0
     for price in prices:
@@ -148,10 +148,10 @@ def PriceSum():
     print(f' - Total: {total}') 
 
 
-#PriceSum()
+#price_sum()
 
 # Nested Loops example. Prints a letter.
-def NestedLoop():
+def nested_loop():
     number_list_for_F = [5, 2, 5, 2, 2]
     number_list_for_L = [2, 2, 2, 2, 5]
     for x_count in number_list_for_L:
@@ -161,11 +161,11 @@ def NestedLoop():
         print(output)
 
 
-#NestedLoop()
+#nested_loop()
 # This could easily be done by multiplying strings, but since in other programming languages doesn't exist such a thing, then we tried another approach.
 
 # Lists in python, this function figures out which is the larger number in list
-def NumberList():
+def number_list():
     number_list = [25, 25, 142, 500, 1010, -5]
     highest_number = number_list[0]
 
@@ -175,10 +175,10 @@ def NumberList():
     print(f' -  The highest number in the list is: {highest_number}')
 
 
-#NumberList()
+#number_list()
 
 # 2D Lists, list of lists.
-def Matrix2DList():
+def matrix_list():
     matrix = [
         [1, 2, 3],
         [4, 5, 6],
@@ -189,7 +189,7 @@ def Matrix2DList():
             print(item)
 
 # Accessing an element in a 2D List.
-def NestedElement():
+def nested_element():
     matrix = [
         [1, 2, 3],
         [4, 5, 6],
@@ -202,32 +202,32 @@ def NestedElement():
     print(f'\n - If you want to access a nested element: {matrix[0][2]}')
 
 
-#NestedElement()
+#nested_element()
 
 # Usage of some List methods
-def RandomNumberList(HowLong = 10):
+def random_number_list(HowLong = 10):
     Random_Number_list = []
     for i in range(HowLong):
         Random_Number_list.append(randint(1, 100)) 
     return Random_Number_list
 
 # Returns a sorted list of unique random numbers. It filters out the repeated numbers.
-def SortedUniquesList(number):
-    Random_Number_list = RandomNumberList(number)  
-    print(Random_Number_list)
+def sorted_uniquesList(number):
+    random_list = random_number_list(number)  
+    print(random_list)
     uniques = []
-    for number in Random_Number_list:
+    for number in random_list:
         if number not in uniques:
             uniques.append(number)
-    Random_Number_list = uniques.copy()
-    # print(sorted(Random_Number_list))
-    return Random_Number_list 
+    random_list = uniques.copy()
+    # print(sorted(random_list))
+    return random_list 
 
 
-#SortedUniquesList(25)
+#sorted_uniquesList(25)
 
 # Algorithm FizzBuzz
-def FizzBuzz(number):
+def fizz_buzz(number):
     if (number % 3 == 0) and (number % 5 == 0) :
         return 'FizzBuzz'
     elif number % 5 == 0:
@@ -237,20 +237,20 @@ def FizzBuzz(number):
     return number
 
 
-#print(FizzBuzz(randint(1,100)))
+#print(fizz_buzz(randint(1,100)))
 
 # Tuples is a data type that can't be modified, identified by parenthesis.
-def TuplesUnpacking():
+def tuples_unpacking():
     coordinates = (1, 2, 3)
     # Unpacking is a very useful feature that can be used with lists and tuples.
     x, y, z = coordinates
     print(x, y, z)
 
 
-#TuplesUnpacking()
+#tuples_unpacking()
 
 # Phone number exercise
-def PhoneExercise():
+def phone_exercise():
     my_dictionary = {
         '1': 'One',
         '2': 'Two',
@@ -265,10 +265,10 @@ def PhoneExercise():
     print(output)
 
 
-#PhoneExercise()
+#phone_exercise()
 
 # Emoji converter: this function converts a string that can be converted into emoji if it is found in the dictionary.
-def EmojiConverter():
+def emoji_converter():
     string = input('> ')
     string_list = string.split(' ')
     EmojiMapping = {
@@ -284,10 +284,10 @@ def EmojiConverter():
     print('\n' + output)
 
 
-#EmojiConverter()
+#emoji_converter()
 
 #This Version has less code.
-def EmojiConverter2():
+def emoji_converter2():
     string = input('> ')
     string_list = string.split(' ')
     EmojiMapping = {
@@ -300,5 +300,5 @@ def EmojiConverter2():
     print('\n' + output)
 
 
-#EmojiConverter2()
+#emoji_converter2()
 

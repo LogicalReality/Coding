@@ -1,7 +1,8 @@
 # This is a simple car engine game.
 # For this version Car state saved in a variable, and added empty print function to reduce the redundance that was present in 1.0 version
+print('\n----- LogicalReality -----\n')
 
-print('\n - The car engine is not started -')
+print(' - The car engine is not started -')
 
 car_engine_is_on = False
 
