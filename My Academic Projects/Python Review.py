@@ -3,7 +3,6 @@
 
 from random import randint, random
 import string
-import string
 
 
 def hello_world():
@@ -392,3 +391,10 @@ cat2 = Cat2()
 cat2.meow()
 dog2 = Dog2()
 dog2.bark()
+
+
+def hule():
+    print('hello')
+
+
+hule()
