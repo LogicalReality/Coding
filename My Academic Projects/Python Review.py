@@ -173,6 +173,8 @@ def price_sum():
 # price_sum()
 
 # Nested Loops example. Prints a letter.
+
+
 def nested_loop():
     number_list_for_F = [5, 2, 5, 2, 2]
     number_list_for_L = [2, 2, 2, 2, 5]
@@ -242,7 +244,7 @@ def random_number_list(HowLong=10):
 # Returns a sorted list of unique random numbers. It filters out the repeated numbers.
 
 
-def sorted_uniquesList(number):
+def sorted_uniques_list(number):
     random_list = random_number_list(number)
     print(random_list)
     uniques = []
@@ -254,7 +256,7 @@ def sorted_uniquesList(number):
     return random_list
 
 
-# sorted_uniquesList(25)
+# sorted_uniques_list(25)
 
 # Algorithm FizzBuzz
 def fizz_buzz(number):
