@@ -1,5 +1,6 @@
 # Reviewing Python: Programming With Mosh (Youtube channel)
-# Practice exercises where made functions to commment them out as needed. This was made this way so I could just practice the ones I want without running the whole code, while using a single file.
+''' Practice exercises where made functions to commment them out as needed. This was made this way so I could just practice the ones I want without running the whole code, while using a single file.
+'''
 
 from random import randint
 import string
@@ -391,10 +392,3 @@ cat2 = Cat2()
 cat2.meow()
 dog2 = Dog2()
 dog2.bark()
-
-
-def hule():
-    print('hello')
-
-
-hule()
