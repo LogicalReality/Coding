@@ -11,8 +11,9 @@ i = 0
 
 # Settings
 tries = 5
-bottom_number = 1
-ceiling_number = 30
+bottom_number = 0
+ceiling_number = 15
+hot_bar_aid = False
 
 # Random number generator function
 random_integer = randint(bottom_number, ceiling_number)
@@ -20,18 +21,21 @@ random_integer = randint(bottom_number, ceiling_number)
 
 def hot_bar_print(num_input: int) -> None:
     '''
-    This function prints a hot bar in the terminal. It indicates how close is user's input to the random number.
+    This function prints a hot bar in the terminal. It indicates how close user's input is to the random number.
     '''
     bar_percent= round(abs(num_input - random_integer) / (ceiling_number - bottom_number), 1)
     bar_fill = '#' * int(((1 - (bar_percent)) * 10)) * 2
-    bar_empty = '-' * int(bar_percent * 10) * 2
+    bar_empty = '-' * int(bar_percent * 10) * 2 
     hot_bar = ' - Hot bar --> ' + '[' + bar_fill + bar_empty + ']'
-    print(hot_bar + '\n')
+    print(f'\n ---X Incorrect. You got {tries - i} tries left.\n')
+    if hot_bar_aid:
+    # This next if statement is called Ternary Operator
+        print(hot_bar, ' Try higher\n' if num_input < random_integer else ' Try lower\n')
 
 
 # Welcome message + explanation
 print(' - $$$ Guessing Minigame! $$$ - \n')
-print(f' - Guess a random integer number between [{bottom_number}] and [{ceiling_number}] - \n')
+print(f' - Guess random-chosen integer number between [{bottom_number}] and [{ceiling_number}] - \n')
 
 # The Following line is just for testing purposes
 #print(f' - Random Number: {random_integer} \n')
@@ -39,7 +43,7 @@ print(f' - Guess a random integer number between [{bottom_number}] and [{ceiling
 while i < tries:
 
     user_input = input(
-        f'Insert a number between {bottom_number} y {ceiling_number}  (both included) >>> ')
+        f'Insert a number between {bottom_number} and {ceiling_number} >>> ')
     try:
         numeric_input = int(user_input)
 
@@ -49,11 +53,9 @@ while i < tries:
         else:
             i += 1
             if numeric_input < random_integer:
-                print(f'\n ---X Too low. You got {tries - i} tries left.\n')
                 hot_bar_print(numeric_input)
 
             elif numeric_input > random_integer:
-                print(f'\n ---X Too high. You got {tries - i} tries left.\n')
                 hot_bar_print(numeric_input)
 
     except ValueError:
