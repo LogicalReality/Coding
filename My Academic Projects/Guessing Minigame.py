@@ -7,13 +7,12 @@ from random import randint
 print('\n----- LogicalReality -----\n')
 
 # >>>>> Guessing game  con While Loops
-i = 0
 
 # Settings
 tries = 5
 bottom_number = 0
 ceiling_number = 15
-hot_bar_aid = False
+hot_bar_aid = True
 
 # Random number generator function
 random_integer = randint(bottom_number, ceiling_number)
@@ -39,6 +38,8 @@ print(f' - Guess random-chosen integer number between [{bottom_number}] and [{ce
 
 # The Following line is just for testing purposes
 #print(f' - Random Number: {random_integer} \n')
+
+i = 0
 
 while i < tries:
 
