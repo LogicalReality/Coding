@@ -16,7 +16,6 @@ hot_bar_aid = True
 # Random number generator function
 random_number = randint(bottom_number, ceiling_number)
 
-
 def hot_bar_print(num_input: int) -> None:
     '''
     This function prints a hot bar in the terminal. It indicates how close user's input is to the random number.
