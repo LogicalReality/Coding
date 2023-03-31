@@ -33,8 +33,6 @@ def hot_bar_print(num_input: int) -> None:
 # The Following line is just for testing purposes
 #print(f' - Random Number: {random_number} \n')
 
-i = 0
-
 while True:
     # Welcome message + explanation
     print(' - $$$ Guessing Minigame! $$$ - \n')
